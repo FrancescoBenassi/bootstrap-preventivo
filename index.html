@@ -23,7 +23,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home</a>
@@ -42,9 +42,9 @@
     <!-- /Testa della pagina con barra di navigazione -->
     <!-- Contenuto della pagina  -->
     <main>
-        <div class="container mx-auto mt-4 row gy-5">
+        <div class="container mx-auto my-md-5 row">
             <!-- prima sezione "form" -->
-            <section class="col-md-12 col-lg-8 p-0">
+            <section class="col-12 col-lg-8 p-0 pe-md-5">
                 <div>
                     <h1>Richiesta Preventivo</h1>
                     <p>Compila il form per ricevere un preventivo per i nostri servizi di sviluppo.</p>
@@ -64,8 +64,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="select-work" class="form-label">Tipo di lavoro</label>
-                        <select class="form-select" id="select-work">
-                            <option selected disabled>Seleziona il tipo di lavoro</option>
+                        <select class="form-select" id="select-work" required>
+                            <option selected disabled value="">Seleziona il tipo di lavoro</option>
                             <option value="Backed Development">Backed Development</option>
                             <option value="Fronted Development">Fronted Development</option>
                             <option value="Project Analysis">Project Analysis</option>
@@ -77,18 +77,25 @@
                     </div>
                     <div class="mb-3">
                         <label for="discount-coupon" class="form-label">Codice Promozionale (opzionale)</label>
-                        <input type="text" class="form-control" id="discount-coupon" required>
+                        <input type="text" class="form-control" id="discount-coupon">
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Accetto la Privacy Police</label>
+                    <div class="mb-5 form-check">
+                        <input type="checkbox" class="form-check-input" id="privacy-rules" required>
+                        <label class="form-check-label" for="privacy-rules">Accetto la Privacy Police</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="mb-3 d-flex flex-column flex-md-row align-items-center justify-content-md-around">
+                        <button type="submit" class="btn btn-primary fs-4 text">Calcola Preventivo</button>
+                        <div>
+                            <h3 class="fs-4 text fw-bold">Prezzo Finale</h3>
+                            <div class="fs-2 text fw-bold text-end">€200,00</div>
+                        </div>
+
+                    </div>
                 </form>
             </section>
             <!-- /prima sezione "form" -->
             <!-- seconda sezione card con "i nostri contatti" -->
-            <section class="col-md-12 col-lg-4 order-md-last p-0"></section>
+            <section class="col-12 col-lg-4 order-md-last p-0">ciao</section>
             <!-- /seconda sezione card con "i nostri contatti" -->
         </div>
     </main>
