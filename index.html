@@ -53,7 +53,7 @@
                     </div>
                     <!-- Intestazione della prima sezione  -->
                     <!-- Form -->
-                    <form>
+                    <form id="calculated-price">
                         <div class="mb-3">
                             <label for="name-user" class="form-label">Nome</label>
                             <input type="text" class="form-control" id="name-user" required>
@@ -69,10 +69,10 @@
                         <div class="mb-3">
                             <label for="select-work" class="form-label">Tipo di lavoro</label>
                             <select class="form-select" id="select-work" required>
-                                <option selected disabled value="">Seleziona il tipo di lavoro</option>
-                                <option value="Backed Development">Backed Development</option>
-                                <option value="Fronted Development">Fronted Development</option>
-                                <option value="Project Analysis">Project Analysis</option>
+                                <option  disabled value="">Seleziona il tipo di lavoro</option>
+                                <option selected value="BackedDevelopment">Backed Development</option>
+                                <option value="FrontedDevelopment">Fronted Development</option>
+                                <option value="ProjectAnalysis">Project Analysis</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -101,8 +101,8 @@
                 <!-- /Prima sezione con all'interno il form -->
                 <!-- Seconda sezione card con all'interno "i nostri contatti" -->
                 <section class="col-12 col-lg-3 order-md-last">
-                    <div class="card" style="max-width: 300px;">
-                        <img src="..." class="card-img-top" alt="immagine nostri contatti">
+                    <div class="card">
+                        <img src="#" class="card-img-top" alt="immagine nostri contatti">
                         <div class="card-body">
                             <h5 class="card-title">I nostri contatti</h5>
                             <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
