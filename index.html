@@ -69,15 +69,15 @@
                         <div class="mb-3">
                             <label for="select-work" class="form-label">Tipo di lavoro</label>
                             <select class="form-select" id="select-work" required>
-                                <option  disabled value="">Seleziona il tipo di lavoro</option>
-                                <option selected value="BackedDevelopment">Backed Development</option>
+                                <option selected disabled value="">Seleziona il tipo di lavoro</option>
+                                <option value="BackedDevelopment">Backed Development</option>
                                 <option value="FrontedDevelopment">Fronted Development</option>
                                 <option value="ProjectAnalysis">Project Analysis</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="select-work" class="form-label">Textarea con Bootstrap 5</label>
-                            <textarea class="form-control" style="height: 100px"></textarea>
+                            <label for="textarea-user" class="form-label">Textarea con Bootstrap 5</label>
+                            <textarea class="form-control" style="height: 100px" id="textarea-user"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="discount-coupon" class="form-label">Codice Promozionale (opzionale)</label>
@@ -91,7 +91,7 @@
                             <button type="submit" class="btn btn-primary fs-4 text">Calcola Preventivo</button>
                             <div>
                                 <h3 class="fs-4 text fw-bold">Prezzo Finale</h3>
-                                <div class="fs-2 text fw-bold text-end">€200,00</div>
+                                <div class="fs-2 text text-end" id="result"><strong>€0</strong>,00</div>
                             </div>
 
                         </div>
