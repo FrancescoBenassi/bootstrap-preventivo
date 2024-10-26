@@ -42,83 +42,93 @@
     <!-- /Testa della pagina con barra di navigazione -->
     <!-- Contenuto della pagina  -->
     <div class="container">
-    <main>
-        <div class="row my-5">
-            <!-- prima sezione "form" -->
-            <section class="col-12 col-lg-9">
-                <div>
-                    <h1>Richiesta Preventivo</h1>
-                    <p>Compila il form per ricevere un preventivo per i nostri servizi di sviluppo.</p>
-                </div>
-                <form>
-                    <div class="mb-3">
-                        <label for="name-user" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="name-user" required>
+        <main>
+            <div class="row my-5">
+                <!-- Prima sezione con all'interno il form -->
+                <section class="col-12 col-lg-9">
+                    <!-- Intestazione della prima sezione  -->
+                    <div>
+                        <h1>Richiesta Preventivo</h1>
+                        <p>Compila il form per ricevere un preventivo per i nostri servizi di sviluppo.</p>
                     </div>
-                    <div class="mb-3">
-                        <label for="surname-user" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="surname-user" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email-user" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email-user" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="select-work" class="form-label">Tipo di lavoro</label>
-                        <select class="form-select" id="select-work" required>
-                            <option selected disabled value="">Seleziona il tipo di lavoro</option>
-                            <option value="Backed Development">Backed Development</option>
-                            <option value="Fronted Development">Fronted Development</option>
-                            <option value="Project Analysis">Project Analysis</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="select-work" class="form-label">Textarea con Bootstrap 5</label>
-                        <textarea class="form-control" style="height: 100px"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="discount-coupon" class="form-label">Codice Promozionale (opzionale)</label>
-                        <input type="text" class="form-control" id="discount-coupon">
-                    </div>
-                    <div class="mb-5 form-check">
-                        <input type="checkbox" class="form-check-input" id="privacy-rules" required>
-                        <label class="form-check-label" for="privacy-rules">Accetto la Privacy Police</label>
-                    </div>
-                    <div class="mb-3 d-flex flex-column flex-md-row align-items-center justify-content-md-around">
-                        <button type="submit" class="btn btn-primary fs-4 text">Calcola Preventivo</button>
-                        <div>
-                            <h3 class="fs-4 text fw-bold">Prezzo Finale</h3>
-                            <div class="fs-2 text fw-bold text-end">€200,00</div>
+                    <!-- Intestazione della prima sezione  -->
+                    <!-- Form -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="name-user" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name-user" required>
                         </div>
+                        <div class="mb-3">
+                            <label for="surname-user" class="form-label">Cognome</label>
+                            <input type="text" class="form-control" id="surname-user" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email-user" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email-user" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="select-work" class="form-label">Tipo di lavoro</label>
+                            <select class="form-select" id="select-work" required>
+                                <option selected disabled value="">Seleziona il tipo di lavoro</option>
+                                <option value="Backed Development">Backed Development</option>
+                                <option value="Fronted Development">Fronted Development</option>
+                                <option value="Project Analysis">Project Analysis</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="select-work" class="form-label">Textarea con Bootstrap 5</label>
+                            <textarea class="form-control" style="height: 100px"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="discount-coupon" class="form-label">Codice Promozionale (opzionale)</label>
+                            <input type="text" class="form-control" id="discount-coupon">
+                        </div>
+                        <div class="mb-5 form-check">
+                            <input type="checkbox" class="form-check-input" id="privacy-rules" required>
+                            <label class="form-check-label" for="privacy-rules">Accetto la Privacy Police</label>
+                        </div>
+                        <div class="mb-3 d-flex flex-column flex-md-row align-items-center justify-content-md-around">
+                            <button type="submit" class="btn btn-primary fs-4 text">Calcola Preventivo</button>
+                            <div>
+                                <h3 class="fs-4 text fw-bold">Prezzo Finale</h3>
+                                <div class="fs-2 text fw-bold text-end">€200,00</div>
+                            </div>
 
+                        </div>
+                    </form>
+                    <!-- /Form -->
+                </section>
+                <!-- /Prima sezione con all'interno il form -->
+                <!-- Seconda sezione card con all'interno "i nostri contatti" -->
+                <section class="col-12 col-lg-3 order-md-last">
+                    <div class="card" style="max-width: 300px;">
+                        <img src="..." class="card-img-top" alt="immagine nostri contatti">
+                        <div class="card-body">
+                            <h5 class="card-title">I nostri contatti</h5>
+                            <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">help@bollfactory.test</li>
+                            <li class="list-group-item">+1122334455</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Help desk</a>
+                        </div>
                     </div>
-                </form>
-            </section>
-            <!-- /prima sezione "form" -->
-            <!-- seconda sezione card con "i nostri contatti" -->
-            <section class="col-12 col-lg-3 order-md-last">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="immagine nostri contatti">
-                    <div class="card-body">
-                        <h5 class="card-title">I nostri contatti</h5>
-                        <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">help@bollfactory.test</li>
-                        <li class="list-group-item">+1122334455</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Help desk</a>
-                    </div>
-                </div>
-            </section>
-            <!-- /seconda sezione card con "i nostri contatti" -->
-        </div>
-    </main>
-</div>
+                </section>
+                <!-- /Seconda sezione card con all'interno "i nostri contatti" -->
+            </div>
+        </main>
+    </div>
     <!-- /Contenuto della pagina  -->
     <!-- Fine della pagina  -->
-    <footer></footer>
+    <footer>
+        <div class="bg-dark text-center py-4" data-bs-theme="dark">
+            <div class="container">
+                <p class="text-white">&#169; 2024 - Tutti i diritti riservati</p>
+            </div>
+        </div>
+    </footer>
     <!-- /Fine della pagina  -->
 
 
