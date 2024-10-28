@@ -34,3 +34,51 @@ const priceWork = [{
 // Variabile della unghezza Array 
 
 const priceWorkLenght = priceWork.length;
+
+// Variabile con le ore di lavoro
+
+const hoursWork = 10;
+
+// Array con dentro i vari codici sconto, variabile con la lunghezza dell'array e sconto da applicare nel caso sia presente uno di questi codici sconto
+
+const coupons = ['YHDNU32', 'JANJC63', 'PWKCN25', 'SJDPO96', 'POCIE24']; // Codici validi per aver il 25% di sconto
+const couponsLenght = coupons.length;
+const priceCoupons = 25 / 100; // Sconto del 25%
+
+// Funzione evento che al submit calcola il prezzo finale e lo aggiunge al DOM modificandolo
+
+calculatedPrice.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const selectWorkValue = selectWork.value;
+    const selectCouponValue = selectCoupon.value;
+    let totalPrice = 0;
+
+    for (let i = 0; i < priceWorkLenght; i++) {
+        const priceWorkObject = priceWork[i];
+        if (selectWorkValue === priceWorkObject.nameWork) {
+            totalPrice = priceWorkObject.price * hoursWork;
+        }
+    }
+
+    for (let i = 0; i < couponsLenght; i++) {
+        const couponsObject = coupons[i];
+        if (selectCouponValue === couponsObject) {
+            totalPrice = totalPrice - (totalPrice * priceCoupons);
+        }
+    }
+
+    nameUser.value = '';
+    surnameUser.value = '';
+    emailUser.value = '';
+    selectWork.value = '';
+    textAreaUser.value = '';
+    selectCoupon.value = '';
+    privacyRules.checked = false;
+
+    let totalPriceString = totalPrice.toFixed(2);
+    let [numberInt, numberDeci] = totalPriceString.split(".");
+
+    result.innerHTML = `€ <strong>${numberInt}</strong>,${numberDeci}`;
+
+})
