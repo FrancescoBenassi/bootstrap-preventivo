@@ -35,6 +35,15 @@ const priceWork = [{
 
 const priceWorkLenght = priceWork.length;
 
+// Ciclo per rendere la select dinamica
+
+for(let i = 0; i < priceWorkLenght; i++){
+    const priceWorks = priceWork[i];
+    const optionElement = document.createElement('option');
+    optionElement.innerHTML = priceWorks.nameWork;
+    selectWork.appendChild(optionElement);
+}
+
 // Variabile con le ore di lavoro
 
 const hoursWork = 10;
@@ -51,7 +60,7 @@ calculatedPrice.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const selectWorkValue = selectWork.value;
-    const selectCouponValue = selectCoupon.value;
+    const selectCouponValue = (selectCoupon.value).toUpperCase();
     let totalPrice = 0;
 
     for (let i = 0; i < priceWorkLenght; i++) {

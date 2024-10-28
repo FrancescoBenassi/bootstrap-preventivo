@@ -70,9 +70,6 @@
                             <label for="select-work" class="form-label">Tipo di lavoro</label>
                             <select class="form-select" id="select-work" required>
                                 <option selected disabled value="">Seleziona il tipo di lavoro</option>
-                                <option value="BackedDevelopment">Backed Development</option>
-                                <option value="FrontedDevelopment">Fronted Development</option>
-                                <option value="ProjectAnalysis">Project Analysis</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -81,7 +78,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="discount-coupon" class="form-label">Codice Promozionale (opzionale)</label>
-                            <input type="text" class="form-control" id="discount-coupon">
+                            <input type="text" class="form-control text-uppercase" id="discount-coupon" maxlength="7">
                         </div>
                         <div class="mb-5 form-check">
                             <input type="checkbox" class="form-check-input" id="privacy-rules" required>
