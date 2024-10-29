@@ -14,6 +14,8 @@ const textAreaUser = document.getElementById('textarea-user');
 
 const selectCoupon = document.getElementById('discount-coupon');
 
+const couponSuccess = document.getElementById('coupon-success');
+
 const privacyRules = document.getElementById('privacy-rules');
 
 const resultPrice = document.getElementById('result');
@@ -60,7 +62,7 @@ calculatedPrice.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const selectWorkValue = selectWork.value;
-    const selectCouponValue = (selectCoupon.value).toUpperCase();
+    const selectCouponValue = (selectCoupon.value);
     let totalPrice = 0;
 
     for (let i = 0; i < priceWorkLenght; i++) {
@@ -74,6 +76,7 @@ calculatedPrice.addEventListener('submit', function (event) {
         const couponsObject = coupons[i];
         if (selectCouponValue === couponsObject) {
             totalPrice = totalPrice - (totalPrice * priceCoupons);
+            couponSuccess.classList.remove('d-none');
         }
     }
 
