@@ -39,7 +39,7 @@ const priceWorkLenght = priceWork.length;
 
 // Ciclo per rendere la select dinamica
 
-for(let i = 0; i < priceWorkLenght; i++){
+for (let i = 0; i < priceWorkLenght; i++) {
     const priceWorks = priceWork[i];
     const optionElement = document.createElement('option');
     optionElement.innerHTML = priceWorks.nameWork;
@@ -56,13 +56,26 @@ const coupons = ['YHDNU32', 'JANJC63', 'PWKCN25', 'SJDPO96', 'POCIE24']; // Codi
 const couponsLenght = coupons.length;
 const priceCoupons = 25 / 100; // Sconto del 25%
 
-// Funzione evento che al submit calcola il prezzo finale e lo aggiunge al DOM modificandolo
+// Funzione evento che al submit valida i campi (nome, cognome, email) se sono corretti, calcola il prezzo finale e lo aggiunge al DOM modificandolo
 
 calculatedPrice.addEventListener('submit', function (event) {
     event.preventDefault();
 
+    //// Inizio Validazione nome, cognome, email
+
+    const nameValue = nameUser.value;
+    if (!isValidName(nameValue)) { return alert("Il nome non è valido"); }
+
+    const surnameValue = surnameUser.value;
+    if (!isValidName(surnameValue)) { return alert("Il cognome non è valido"); }
+
+    const emailValue = emailUser.value;
+    if (!isValidEmail(emailValue)) { return alert("L'email non è valida"); }
+
+    //// Fine Validazione nome, cognome, email
+
     const selectWorkValue = selectWork.value;
-    const selectCouponValue = (selectCoupon.value);
+    const selectCouponValue = selectCoupon.value;
     let totalPrice = 0;
 
     for (let i = 0; i < priceWorkLenght; i++) {
@@ -94,3 +107,17 @@ calculatedPrice.addEventListener('submit', function (event) {
     result.innerHTML = `€ <strong>${numberInt}</strong>,${numberDeci}`;
 
 })
+
+// Funzione per validare una parola
+
+function isValidName(string) {
+    const wordPattern = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+    return wordPattern.test(string);
+}
+
+// Fnzione per validare una email
+
+function isValidEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
