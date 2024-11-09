@@ -50,13 +50,15 @@ for (let i = 0; i < priceWorkLenght; i++) {
 
 const hoursWork = 10;
 
-// Array con dentro i vari codici sconto, variabile con la lunghezza dell'array e sconto da applicare nel caso sia presente uno di questi codici sconto
+/* Array con dentro i vari codici sconto, variabile con la lunghezza dell'array e sconto 
+da applicare nel caso sia presente uno di questi codici sconto */
 
 const coupons = ['YHDNU32', 'JANJC63', 'PWKCN25', 'SJDPO96', 'POCIE24']; // Codici validi per aver il 25% di sconto
 const couponsLenght = coupons.length;
 const priceCoupons = 25 / 100; // Sconto del 25%
 
-// Funzione evento che al submit valida i campi (nome, cognome, email) se sono corretti, calcola il prezzo finale e lo aggiunge al DOM modificandolo
+/* Funzione evento che al submit valida i campi (nome, cognome, email) se sono corretti, 
+calcola il prezzo finale e lo aggiunge al DOM modificandolo */
 
 calculatedPrice.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -78,12 +80,16 @@ calculatedPrice.addEventListener('submit', function (event) {
     const selectCouponValue = selectCoupon.value;
     let totalPrice = 0;
 
+    // Ciclo per calcolare il prezzo del lavoro in base al lavoro scelto dall'utente
+
     for (let i = 0; i < priceWorkLenght; i++) {
         const priceWorkObject = priceWork[i];
         if (selectWorkValue === priceWorkObject.nameWork) {
             totalPrice = priceWorkObject.price * hoursWork;
         }
     }
+
+    // Ciclo per verificare e calcolare lo sconto nel caso il coupon fosse stato inserito
 
     for (let i = 0; i < couponsLenght; i++) {
         const couponsObject = coupons[i];
@@ -93,6 +99,8 @@ calculatedPrice.addEventListener('submit', function (event) {
         }
     }
 
+    // Svuotamento dei campi input
+
     nameUser.value = '';
     surnameUser.value = '';
     emailUser.value = '';
@@ -100,6 +108,8 @@ calculatedPrice.addEventListener('submit', function (event) {
     textAreaUser.value = '';
     selectCoupon.value = '';
     privacyRules.checked = false;
+
+    //Aggiunta del prezzo finale al DOM
 
     let totalPriceString = totalPrice.toFixed(2);
     let [numberInt, numberDeci] = totalPriceString.split(".");
