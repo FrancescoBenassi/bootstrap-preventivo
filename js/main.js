@@ -113,8 +113,8 @@ calculatedPrice.addEventListener('submit', function (event) {
 
     //Aggiunta del prezzo finale al DOM
 
-    let totalPriceString = totalPrice.toFixed(2);
-    let [numberInt, numberDeci] = totalPriceString.split(".");
+    totalPrice = totalPrice.toFixed(2);
+    let [numberInt, numberDeci] = totalPrice.split(".");
 
     result.innerHTML = `€ <strong>${numberInt}</strong>,${numberDeci}`;
 
