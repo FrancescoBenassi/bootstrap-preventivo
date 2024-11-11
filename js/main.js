@@ -23,13 +23,13 @@ const resultPrice = document.getElementById('result');
 // Array con oggetti dei nomi e dei prezzi dei vari lavori
 
 const priceWork = [{
-    nameWork: 'BackedDevelopment',
+    nameWork: 'Backed Development',
     price: 20.50
 }, {
-    nameWork: 'FrontedDevelopment',
+    nameWork: 'Fronted Development',
     price: 15.30
 }, {
-    nameWork: 'ProjectAnalysis',
+    nameWork: 'Project Analysis',
     price: 33.60
 }]
 
