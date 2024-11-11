@@ -91,6 +91,8 @@ calculatedPrice.addEventListener('submit', function (event) {
 
     // Ciclo per verificare e calcolare lo sconto nel caso il coupon fosse stato inserito
 
+    couponSuccess.classList.add('d-none');
+
     for (let i = 0; i < couponsLenght; i++) {
         const couponsObject = coupons[i];
         if (selectCouponValue === couponsObject) {
