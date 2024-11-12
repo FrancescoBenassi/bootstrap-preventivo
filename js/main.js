@@ -63,7 +63,7 @@ calcola il prezzo finale e lo aggiunge al DOM modificandolo */
 calculatedPrice.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    //// Inizio Validazione nome, cognome, email
+    //// Inizio Validazione nome, cognome, email e Privacy Police
 
     const nameValue = nameUser.value;
     if (!isValidName(nameValue)) { return alert("Il nome non è valido"); }
@@ -74,7 +74,9 @@ calculatedPrice.addEventListener('submit', function (event) {
     const emailValue = emailUser.value;
     if (!isValidEmail(emailValue)) { return alert("L'email non è valida"); }
 
-    //// Fine Validazione nome, cognome, email
+    if (privacyRules.checked === false) { return alert("Devi accettare le condizioni della Privacy Police"); }
+
+    //// Fine Validazione nome, cognome, email e Privacy Police
 
     const selectWorkValue = selectWork.value;
     const selectCouponValue = selectCoupon.value;
