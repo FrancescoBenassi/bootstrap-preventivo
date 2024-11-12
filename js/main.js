@@ -118,7 +118,7 @@ calculatedPrice.addEventListener('submit', function (event) {
     totalPrice = totalPrice.toFixed(2);
     let [numberInt, numberDeci] = totalPrice.split(".");
 
-    result.innerHTML = `€ <strong>${numberInt}</strong>,${numberDeci}`;
+    resultPrice.innerHTML = `€ <strong>${numberInt}</strong>,${numberDeci}`;
 
 })
 
