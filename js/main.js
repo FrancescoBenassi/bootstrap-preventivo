@@ -57,8 +57,8 @@ const coupons = ['YHDNU32', 'JANJC63', 'PWKCN25', 'SJDPO96', 'POCIE24']; // Codi
 const couponsLenght = coupons.length;
 const priceCoupons = 25 / 100; // Sconto del 25%
 
-/* Funzione evento che al submit valida i campi (nome, cognome, email) se sono corretti, 
-calcola il prezzo finale e lo aggiunge al DOM modificandolo */
+/* Funzione evento che al submit valida i campi (nome, cognome, email e Privacy Police) se sono corretti, 
+calcola il prezzo finale, svuota i campi e infine aggiunge il prezzo finale al DOM modificandolo */
 
 calculatedPrice.addEventListener('submit', function (event) {
     event.preventDefault();

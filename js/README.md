@@ -5,7 +5,7 @@
 3) Creare un ciclo per rendere la select dinamica
 4) Creare un'array "coupon" con dentro i vari codici sconto
 5) Creare una funzione evento al submit per calcolare il prezzo finale e aggiungerlo al DOM modificandolo
-    - Validare il nome, cognome, email
+    - Validare il nome, cognome, email e Privacy Police
     - Confrontare il lavoro scelto nel form con gli oggetti nell'array "lavoro" e applicare il giusto prezzo
     - Calcolare il prezzo in base al lavoro e alla quantità d'ore di lavoro(10 ore)
     - Confrontare lo sconto se è stato applicato confrontandolo con gli oggetti nell'array "sconto"
