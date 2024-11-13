@@ -33,7 +33,7 @@ const priceWork = [{
     price: 33.60
 }]
 
-// Variabile della unghezza Array 
+// Variabile con all'interno la lunghezza Array d oggetti priceWork
 
 const priceWorkLenght = priceWork.length;
 
@@ -46,11 +46,11 @@ for (let i = 0; i < priceWorkLenght; i++) {
     selectWork.appendChild(optionElement);
 }
 
-// Variabile con le ore di lavoro
+// Variabile con all'interno le ore di lavoro, orario fisso
 
 const hoursWork = 10;
 
-/* Array con dentro i vari codici sconto, variabile con la lunghezza dell'array e sconto 
+/* Array con dentro i vari codici sconto, variabile con all'interno la lunghezza dell'array e sconto 
 da applicare nel caso sia presente uno di questi codici sconto */
 
 const coupons = ['YHDNU32', 'JANJC63', 'PWKCN25', 'SJDPO96', 'POCIE24']; // Codici validi per aver il 25% di sconto
